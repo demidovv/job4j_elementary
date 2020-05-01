@@ -11,7 +11,7 @@ public class PointTest {
         int in2 = 3;
         int in3 = 12;
         int in4 = 7;
-        double expected = 7.21;
+        double expected = 7.211;
         double out = Point.distance(in1, in2, in3, in4);
         Assert.assertEquals(expected, out, 0.001);
 
