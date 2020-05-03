@@ -13,23 +13,16 @@ public class MultiMaxTest {
     }
 
     @Test
-    public void whenSecondMax1() {
+    public void whenThirdMax() {
         MultiMax check = new MultiMax();
         int result = check.max(2, 1, 4);
         assertThat(result, is(4));
     }
 
     @Test
-    public void whenSecondMax2() {
+    public void whenFirstMax() {
         MultiMax check = new MultiMax();
         int result = check.max(4, 1, 2);
-        assertThat(result, is(4));
-    }
-
-    @Test
-    public void whenSecondMax3() {
-        MultiMax check = new MultiMax();
-        int result = check.max(2, 4, 1);
         assertThat(result, is(4));
     }
 }
