@@ -8,29 +8,26 @@ public class Merge {
         int[] rsl = new int[left.length + right.length];
         int indexLeft = 0;
         int indexRight = 0;
-        int indexRsl = 0;
 
-        while (indexRsl < rsl.length) {
+        while (indexLeft < left.length && indexRight < right.length) {
             if (left[indexLeft] < right[indexRight]) {
-                rsl[indexRsl] = left[indexLeft];
-
-                    indexLeft++;
-
-
+                rsl[indexLeft + indexRight] = left[indexLeft];
+                indexLeft++;
             } else {
-                rsl[indexRsl] = right[indexRight];
-
-                    indexRight++;
-
+                rsl[indexLeft + indexRight] = right[indexRight];
+                indexRight++;
             }
-            indexRsl++;
         }
 
-
-
-
+        for (int i = indexLeft; i < left.length; i++) {
+            rsl[indexRight + i] = left[i];
+        }
+        for (int i = indexRight; i < right.length; i++) {
+            rsl[indexLeft + i] = right[i];
+        }
         return rsl;
     }
+
 
     public static void main(String[] args) {
         Merge process = new Merge();
