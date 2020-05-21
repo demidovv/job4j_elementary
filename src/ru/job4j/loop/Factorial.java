@@ -1,6 +1,11 @@
 package ru.job4j.loop;
 
 public class Factorial {
+    /**
+     * Нахождение факториала числа
+     * @param n
+     * @return
+     */
     public static int calc(int n) {
         int result = 1;
         if (n == 0) {

@@ -1,6 +1,11 @@
 package ru.job4j.array;
 
 public class Check {
+    /**
+     * Проверка массива на однородность
+     * @param data
+     * @return
+     */
     public static boolean mono(boolean[] data) {
         boolean result = true;
         for (int index = 1; index < data.length; index++) {

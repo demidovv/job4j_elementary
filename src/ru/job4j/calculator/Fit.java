@@ -1,11 +1,21 @@
 package ru.job4j.calculator;
 
 public class Fit {
+    /**
+     * "Идеальный" вес мужчины
+     * @param height
+     * @return
+     */
     public static double manWeight(double height) {
         double rsl = (height - 100) * 1.15;
         return rsl;
     }
 
+    /**
+     * "Идеальный" вес женщины
+     * @param height
+     * @return
+     */
     public static double womanWeight(double height) {
         double rsl = (height - 110) * 1.15;
         return rsl;
