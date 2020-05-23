@@ -1,11 +1,15 @@
 package ru.job4j.array;
 
 public class Defragment {
+    /**
+     * Дефрагментируем массив
+     * @param array
+     * @return
+     */
     public static String[] compress(String[] array) {
         for (int index = 0; index < array.length; index++) {
             if (array[index] == null) {
                 int point = index; // указатель, на не null ячейку.
-
                 while (point < array.length - 1) {
                     if (array[point + 1] != null) {
                         array[index] = array[point + 1];
@@ -13,7 +17,6 @@ public class Defragment {
                         break;
                     }
                     point++;
-
                 }
             }
             System.out.print(array[index] + " ");

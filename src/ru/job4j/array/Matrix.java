@@ -1,6 +1,11 @@
 package ru.job4j.array;
 
 public class Matrix {
+    /**
+     * Создаем таблицу Пифагора
+     * @param size
+     * @return
+     */
     public int[][] multiple(int size) {
         int[][] table = new int[size][size];
         for (int i = 0; i < size; i++) {
@@ -8,7 +13,6 @@ public class Matrix {
                 table[i][j] = (i + 1) * (j + 1);
             }
         }
-
         return table;
     }
 }

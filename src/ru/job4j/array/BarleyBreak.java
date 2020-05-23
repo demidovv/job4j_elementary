@@ -8,9 +8,7 @@ public class BarleyBreak {
             for (int j = 0; j < 3; j++) {
                 table[i][j] = number;
                 number++;
-                //System.out.print(table[i][j]);
             }
-            //System.out.println("");
         }
     }
 }
