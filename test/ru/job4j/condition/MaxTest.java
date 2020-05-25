@@ -11,14 +11,14 @@ public class MaxTest {
         assertThat(result, is(2));
     }
     @Test
-    public void whenMax4To2Then4() {
-        int result = Max.max(4, 2);
-        assertThat(result, is(4));
+    public void whenMax4To2And8Then8() {
+        int result = Max.max(4, 2, 8);
+        assertThat(result, is(8));
     }
     @Test
-    public void whenMax84To84Then84() {
-        int result = Max.max(84, 84);
-        assertThat(result, is(84));
+    public void whenMax84p107p42p99Then107() {
+        int result = Max.max(84, 107, 42, 99);
+        assertThat(result, is(107));
     }
     @Test
     public void whenMax8Tominus8Then8() {
