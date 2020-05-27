@@ -5,7 +5,13 @@ public class Animal {
         super();
         System.out.println("Animal");
     }
+
+    public Animal(String name) {
+        System.out.println(name);
+    }
+
     public static void main(String[] args) {
+
         Predator predator = new Predator();
     }
 }
