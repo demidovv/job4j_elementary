@@ -1,10 +1,9 @@
 package ru.job4j.profession;
 
 public class Doctor extends Profession {
+    private String clinic;
 
-    String clinic;
-
-    public void prescribe() {
+    public void getRecipe() {
     }
 
     public void injection() {

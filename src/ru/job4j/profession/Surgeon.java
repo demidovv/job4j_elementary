@@ -1,10 +1,17 @@
 package ru.job4j.profession;
 
 public class Surgeon extends Doctor {
-    operating room number
+    private String operatingRoomNumber;
 
-    stop the bleeding
-    take the scalpel
-    Take the clamp
-            stitch
+    public void stopTheBleeding() {
+    }
+
+    public void takeScalpel() {
+    }
+
+    public void takeClamp() {
+
+    }
+    public void toStitch() {
+    }
 }

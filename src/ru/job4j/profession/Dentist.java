@@ -1,9 +1,14 @@
 package ru.job4j.profession;
 
-public class Dentist extends Doctor{
-    office number
+public class Dentist extends Doctor {
+    private int officeNumber;
 
-    remove the tooth
-            drilling
-    insert a tooth
+    public void removeTooth() {
+    }
+
+    public void drilling() {
+    }
+
+    public void insertTooth() {
+    }
 }
