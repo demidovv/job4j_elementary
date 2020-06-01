@@ -29,8 +29,10 @@ public class Library {
                     + books[i].getPages() + " pages.");
         }
         System.out.println("");
+
+        String tempTitle = "Clean Code";
         for (int i = 0; i < books.length; i++) {
-            if (books[i].getTitle() == "Clean Code") {
+            if (books[i].getTitle().equals(tempTitle)) {
                 System.out.println("Book #" + (i + 1) + " " + books[i].getTitle() + " contains "
                         + books[i].getPages() + " pages.");
             }
