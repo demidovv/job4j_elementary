@@ -1,7 +1,5 @@
 package ru.job4j.pojo;
 
-import ru.job4j.array.SwitchArray;
-
 public class Library {
     public static void main(String[] args) {
         Book cleanCode = new Book("Clean Code", 464);
