@@ -54,14 +54,22 @@ public class Tracker {
      * @return
      */
     public Item findById(String id) {
-        Item tempItem = new Item(null);
-        for (int i = 0; i < position; i++) {
-            if (items[i].getId().equals(id)) {
-                tempItem = items[i];
-                break;
-            }
-        }
-        return tempItem;
+        // Находим индекс
+        int index = indexOf(id);
+        // Если индекс найден возвращаем item, иначе null
+        return index != -1 ? items[index] : null;
+    }
+
+    /**
+     * Метод замены заявки
+     * @param newItem
+     * @param id
+     */
+    public void replace(String id, Item newItem) {
+        int index = indexOf(id);
+        newItem.setId(id);
+        items[index] = newItem;
+//        items[index].setName(newItem.getName());
     }
 
     /**
@@ -73,4 +81,22 @@ public class Tracker {
         Random rm = new Random();
         return String.valueOf(rm.nextLong() + System.currentTimeMillis());
     }
+
+    /**
+     * Метод, который будет возвращать index по id
+     * @param id
+     * @return
+     */
+    private int indexOf(String id) {
+        int rsl = -1;
+        for (int index = 0; index < position; index++) {
+            if (items[index].getId().equals(id)) {
+                rsl = index;
+                break;
+            }
+        }
+        return rsl;
+    }
+
+
 }
