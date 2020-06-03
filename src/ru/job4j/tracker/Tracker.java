@@ -37,15 +37,15 @@ public class Tracker {
      * @return
      */
     public Item[] findByName(String key) {
-        Item[] tempItems = new Item[position];
+        Item[] temp = new Item[position];
         int size = 0;
 
         for (int i = 0; i < position; i++) {
             if (items[i].getName().equals(key)) {
-                tempItems[size++] = items[i];
+                temp[size++] = items[i];
             }
         }
-        return Arrays.copyOf(tempItems, size);
+        return Arrays.copyOf(temp, size);
     }
 
     /**
@@ -62,13 +62,13 @@ public class Tracker {
 
     /**
      * Метод замены заявки
-     * @param newItem
+     * @param fresh
      * @param id
      */
-    public void replace(String id, Item newItem) {
+    public void replace(String id, Item fresh) {
         int index = indexOf(id);
-        newItem.setId(id);
-        items[index] = newItem;
+        fresh.setId(id);
+        items[index] = fresh;
 //        items[index].setName(newItem.getName());
     }
 
