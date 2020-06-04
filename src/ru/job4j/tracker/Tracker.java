@@ -65,11 +65,14 @@ public class Tracker {
      * @param fresh
      * @param id
      */
-    public void replace(String id, Item fresh) {
+    public boolean replace(String id, Item fresh) {
         int index = indexOf(id);
+        boolean rsl = index != -1;
         fresh.setId(id);
-        items[index] = fresh;
-//        items[index].setName(newItem.getName());
+        if (rsl) {
+            items[index] = fresh;
+        }
+        return rsl;
     }
 
     /**
@@ -77,11 +80,15 @@ public class Tracker {
      * @param id
      * @return
      */
-    public void delete(String id) {
+    public boolean delete(String id) {
         int index = indexOf(id);
-        System.arraycopy(items, index + 1, items, index, position - index);
-        items[position - 1] = null;
-        position--;
+        boolean rsl = index != -1;
+        if (rsl) {
+            System.arraycopy(items, index + 1, items, index, position - index);
+            items[position - 1] = null;
+            position--;
+        }
+        return rsl;
     }
 
     /**
