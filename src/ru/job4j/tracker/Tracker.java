@@ -68,8 +68,8 @@ public class Tracker {
     public boolean replace(String id, Item fresh) {
         int index = indexOf(id);
         boolean rsl = index != -1;
-        fresh.setId(id);
         if (rsl) {
+            fresh.setId(id);
             items[index] = fresh;
         }
         return rsl;
