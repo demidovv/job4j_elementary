@@ -53,7 +53,11 @@ public class StartUI {
                 System.out.println("===  Find item by Id ====");
                 System.out.print("Enter id: ");
                 String id = scanner.nextLine();
-                System.out.println(tracker.findById(id).getName());
+                if (tracker.findById(id) != null) {
+                    System.out.println(tracker.findById(id).getName());
+                } else {
+                    System.out.println("Введен неправильный id.");
+                }
 
             } else if (select == 5) {
                 System.out.println("=== Find items by name ====");
