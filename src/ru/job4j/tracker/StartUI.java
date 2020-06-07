@@ -30,10 +30,8 @@ public class StartUI {
                 String id = scanner.nextLine();
                 System.out.print("Enter name: ");
                 String name = scanner.nextLine();
-                Item item = tracker.findById(id);
-                if (item != null) {
-                    item.setName(name);
-                    tracker.replace(id, item);
+                Item item = new Item(name);
+                if (tracker.replace(id, item)) {
                     System.out.println("Done.");
                 } else {
                     System.out.println("Введен неправильный id.");
@@ -53,8 +51,9 @@ public class StartUI {
                 System.out.println("===  Find item by Id ====");
                 System.out.print("Enter id: ");
                 String id = scanner.nextLine();
-                if (tracker.findById(id) != null) {
-                    System.out.println(tracker.findById(id).getName());
+                Item item = tracker.findById(id);
+                if (item != null) {
+                    System.out.println(item.getName());
                 } else {
                     System.out.println("Введен неправильный id.");
                 }
@@ -87,8 +86,7 @@ public class StartUI {
                 "3. Delete item\n" +
                 "4. Find item by Id\n" +
                 "5. Find items by name\n" +
-                "6. Exit Program\n" +
-                "Select:");
+                "6. Exit Program\n");
     }
 
 
