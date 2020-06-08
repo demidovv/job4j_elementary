@@ -21,7 +21,7 @@ public class StartUI {
                 System.out.println("=== Show all items ====");
                 Item[] all = tracker.findAll();
                 for (int i = 0; i < all.length; i++) {
-                    System.out.println(i + 1 + ". " + "Name: " + all[i].getName() + " id: " + all[i].getId());
+                    System.out.println(i + 1 + all[i].toString());
                 }
 
             } else if (select == 2) {
@@ -65,7 +65,7 @@ public class StartUI {
                 Item[] find = tracker.findByName(name);
                 if (find.length != 0) {
                     for (int i = 0; i < find.length; i++) {
-                        System.out.println(i + 1 + ". " + "Name: " + find[i].getName() + " id: " + find[i].getId());
+                        System.out.println(i + 1 + find[i].toString());
                     }
                 } else {
                     System.out.println("Имя отсутствует в трекере!");
@@ -78,6 +78,7 @@ public class StartUI {
     }
 
 
+    @SuppressWarnings("checkstyle:OperatorWrap")
     private void showMenu() {
         System.out.println("Menu.");
         System.out.println("0. Add new Item\n" +
