@@ -17,9 +17,9 @@ public class StartUITest {
             StartUI.createItem(input, tracker);
         }
 
+        Item[] created = tracker.findAll();
         for (int i = 0; i < numbers; i++) {
-            Item created = tracker.findAll()[i];
-            assertThat(created.getName(), is(answers[i]));
+            assertThat(created[i].getName(), is(answers[i]));
         }
     }
 }
